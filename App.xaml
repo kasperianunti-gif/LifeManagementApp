@@ -1,0 +1,21 @@
+<Application
+    x:Class="LifeManagementApp.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:LifeManagementApp.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:DoneTextConverter x:Key="DoneText" />
+
+            <Style x:Key="Heading" TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="Error" TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light=#A42121, Dark=#FFAEAE}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,31 @@
+<ContentPage
+    x:Class="LifeManagementApp.Views.TodoFormPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:LifeManagementApp.ViewModels"
+    x:DataType="vm:TodoFormViewModel"
+    Title="{Binding PageTitle}">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="10" MaximumWidthRequest="560"
+                             HorizontalOptions="Start">
+            <Label Text="{Binding PageTitle}" Style="{StaticResource Heading}" />
+            <Label Text="Otsikko" />
+            <Entry Text="{Binding Title, Mode=TwoWay}" Placeholder="Esim. Tee labraraportti"
+                   MinimumWidthRequest="270" />
+
+            <Label Text="Prioriteetti (5 = tärkein)" />
+            <Picker ItemsSource="{Binding Priorities}" SelectedItem="{Binding Priority, Mode=TwoWay}" />
+
+            <Label Text="Eräpäivä" />
+            <DatePicker Date="{Binding DueDate, Mode=TwoWay}" Format="dd.MM.yyyy" />
+
+            <HorizontalStackLayout Spacing="8">
+                <CheckBox IsChecked="{Binding IsDone, Mode=TwoWay}"
+                          SemanticProperties.Description="Tehty" />
+                <Label Text="Tehty" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Label Text="{Binding ErrorMessage}" Style="{StaticResource Error}" />
+            <Button Text="Tallenna" Command="{Binding SaveCommand}" HorizontalOptions="Start" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

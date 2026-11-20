@@ -1,0 +1,43 @@
+<ContentPage
+    x:Class="LifeManagementApp.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:LifeManagementApp.Models"
+    xmlns:vm="clr-namespace:LifeManagementApp.ViewModels"
+    x:DataType="vm:HomeViewModel"
+    Title="Etusivu">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14">
+            <Label Text="Vaasan sää" Style="{StaticResource Heading}" />
+            <ActivityIndicator IsRunning="{Binding IsWeatherLoading}"
+                               IsVisible="{Binding IsWeatherLoading}"
+                               HorizontalOptions="Start" />
+            <Label Text="{Binding WeatherText}" />
+            <Label Text="{Binding WeatherError}" Style="{StaticResource Error}" />
+            <Label Text="Kitesurf-keli!"
+                   IsVisible="{Binding ShowKitesurfNotice}"
+                   FontSize="20" FontAttributes="Bold" />
+            <Button Text="Päivitä etusivu" Command="{Binding LoadCommand}"
+                    HorizontalOptions="Start" />
+
+            <Label Text="3 tärkeintä tehtävää" Style="{StaticResource Heading}" />
+            <Label Text="{Binding TodoError}" Style="{StaticResource Error}" />
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding TopTodos}" Spacing="8">
+                <BindableLayout.EmptyView>
+                    <Label Text="Ei keskeneräisiä tehtäviä." />
+                </BindableLayout.EmptyView>
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="models:TodoItem">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" />
+                            <HorizontalStackLayout Spacing="12">
+                                <Label Text="{Binding Priority, StringFormat='Prioriteetti {0}'}" />
+                                <Label Text="{Binding DueDate, StringFormat='Eräpäivä {0:dd.MM.yyyy}'}" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
