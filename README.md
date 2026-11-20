@@ -36,15 +36,6 @@ classDiagram
     WeatherResponse --> WeatherInfo
 ```
 
-## Kokeile ennen esittelyä
-
-1. Yritä tallentaa tyhjä otsikko ja pelkkiä välilyöntejä.
-2. Lisää neljä tehtävää. Anna kahdelle sama prioriteetti ja eri eräpäivät. Tarkista molemmat lajittelut ja etusivun kolme tehtävää.
-3. Valitse tehtävä, paina **Muokkaa valittua**, merkitse se tehdyksi ja tallenna. Tehtävä näkyy listalla tehtynä ja poistuu etusivun kärjestä.
-4. Sulje sovellus ja avaa uudelleen. Tarkista, että tiedot säilyivät.
-5. Kokeile sääpäivitystä ilman verkkoa. Tarkista virheilmoitus ja tehtävälistan toiminta. Esittelyharjoituksessa voit hetkeksi muuttaa arvoa `KitesurfWindLimit` ja käynnistää uudelleen.
-
-Avaa [KOODIOPAS.md](KOODIOPAS.md), kun haluat seurata yksittäisen toiminnon kulkua ja harjoitella esittelykysymyksiä.
 
 ## Tarkistettu tässä versiossa
 
