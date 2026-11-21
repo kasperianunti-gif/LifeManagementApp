@@ -43,4 +43,4 @@ Yhteiset MAUI-XAML-sivut ja niiden compiled bindingit käännettiin. SQLite-lis�
 
 ## Tekoälyn käyttö
 
-AI auttoi laatimaan projektin lähtökoodin, tarkistamaan tallennusta, lajittelua ja säätoimintoa. Yleisesti koitin itse katsoa koodin läpi ja AI auttoi sen laatimisessa, koitin myös korjata bugeja ja ongelmia itse, jos en siinä onnistunut niin kysyin AI:n apua. 
+AI auttoi laatimaan projektin lähtökoodin, tarkistamaan tallennusta, lajittelua ja säätoimintoa. Yleisesti koitin itse katsoa koodin läpi ja AI auttoi sen laatimisessa, koitin myös korjata bugeja ja ongelmia itse, jos en siinä onnistunut niin kysyin AI:n apua. AI laati README tiedoston myös.
