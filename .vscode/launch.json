@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "LifeManagementApp (Windows)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/Debug/net9.0-windows10.0.19041.0/win10-x64/LifeManagementApp.exe",
+      "cwd": "${workspaceFolder}/bin/Debug/net9.0-windows10.0.19041.0/win10-x64",
+      "console": "internalConsole",
+      "stopAtEntry": false,
+      "justMyCode": true
+    }
+  ]
+}
